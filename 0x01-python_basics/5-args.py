@@ -9,8 +9,14 @@ def numArgs():
 
     '''checks to see if there are more than 1 args'''
     arguments = "arguments"
-    if len(sys.argv) < 1:
-        print('{} {}'.format(0, arguments))
+    argument = "argument"
+    if len(sys.argv) < 2:
+        print('{} {}.'.format(0, argument))
+    elif len(sys.argv) == 2:
+        print('{} {}:'.format(len(sys.argv) - 1, argument))
+        for arg in range(len(sys.argv)):
+            if arg != 0:
+                print('{}: {}'.format(arg, sys.argv[arg]))
     else:
         print('{} {}:'.format(len(sys.argv) - 1, arguments))
         for arg in range(len(sys.argv)):
