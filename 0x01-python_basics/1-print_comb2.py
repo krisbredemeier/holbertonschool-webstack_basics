@@ -4,6 +4,6 @@
 
 for number in range(0, 100):
     if number == 99:
-        print('99')
+        print(str(number))
     else:
         print('{}'.format(str(number)).zfill(2), '', sep=", ", end="")
