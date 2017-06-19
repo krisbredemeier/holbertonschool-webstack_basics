@@ -12,4 +12,7 @@ def no_c(str):
         if i == 'c' or i == 'C':
             i = ""
         without += i
-    print(without)
+    return(without)
+
+if __name__ == '__main__':
+    no_c()
