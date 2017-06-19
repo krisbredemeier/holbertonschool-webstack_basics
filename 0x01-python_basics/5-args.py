@@ -9,10 +9,10 @@ def numArgs():
     if len(sys.argv) < 1:
         print('{} {}'.format(0, arguments))
     else:
-        print('{} {}'.format(len(sys.argv) -1, arguments))
+        print('{} {}:'.format(len(sys.argv) -1, arguments))
         for arg in range(len(sys.argv)):
             if arg !=0:
-                print('{} {}'.format(arg, sys.argv[arg]))
+                print('{}: {}'.format(arg, sys.argv[arg]))
 
 if __name__ == '__main__':
     numArgs()
