@@ -4,9 +4,9 @@
 
 def max_integer(my_list=[]):
     '''If the list is empty, return None'''
-    biggest = my_list[0]
     if len(my_list) <= 0:
         return None
+    biggest = my_list[0]
     for i in range(0, len(my_list)):
         if biggest < my_list[i]:
             biggest = my_list[i]
