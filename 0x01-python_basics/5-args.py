@@ -5,4 +5,7 @@ import sys
 and the list of its arguments.'''
 
 for arg in sys.argv:
-    print(arg)
+    if len(sys.argv) > 1:
+        print(arg)
+    else:
+        print('0 Arguments')
