@@ -3,7 +3,9 @@
 '''Write a function that removes all c and C of a string
 and return the new string.'''
 
+
 def no_c(str):
+
     '''remove c and C'''
     without = ''
     for i in str:
