@@ -5,7 +5,7 @@
 
 def print_sorted_dictionary(my_dict):
     for key, value in sorted(my_dict.items()):
-        print('{} : {}'.format(key, value))
+        print('{}: {}'.format(key, value))
 
 
 if __name__ == '__main__':
