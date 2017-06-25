@@ -1,4 +1,8 @@
 #!/usr/bin/node
-for (var i = 0; i < 10; i++) {
-  console.log(i)
+function argvCounter() {
+  for (var i = 0; i < 10; i++) {
+    console.log(i)
+  }
+  console.log('arguments', i)
 }
+argvCounter()
