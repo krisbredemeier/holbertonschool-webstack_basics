@@ -3,4 +3,9 @@
 "use strict";
 let argv = process.argv;
 
-console.log(argv)
+if (argv < 3) {
+   console.log('No argument');
+  }
+if (argv > 3) {
+  console.log(argv);
+  }
