@@ -1,1 +1,2 @@
-counsol.log("C is fun")
+#!/usr/bin/node
+counsol.log('C is fun')
