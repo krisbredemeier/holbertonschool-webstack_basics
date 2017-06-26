@@ -3,13 +3,15 @@
 "use strict";
 let arg = process.argv;
 //create counter
-while (arg[i] = 0) {
+let i = 0;
+
+while (arg[i]) {
     i++;
 }
 
-if (arg < 3) {
+if (i === 2) {
    console.log('No argument');
   }
-if (arg > 3) {
-  console.log(argv);
+if (i > 3) {
+  console.log(argv[i]);
   }
