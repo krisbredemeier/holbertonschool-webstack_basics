@@ -1,11 +1,15 @@
 #!/usr/bin/node
 //Write a script that prints the first argument passed to it:
 "use strict";
-let argv = process.argv;
+let arg = process.argv;
+//create counter
+while (arg[i] = 0) {
+    i++;
+}
 
-if (argv < 3) {
+if (arg < 3) {
    console.log('No argument');
   }
-if (argv > 3) {
+if (arg > 3) {
   console.log(argv);
   }
