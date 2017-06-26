@@ -13,5 +13,6 @@ if (i === 2) {
    console.log('No argument');
   }
 if (i > 3) {
-  console.log(argv[i]);
+  //prints first argument
+  console.log(arg[2]);
   }
