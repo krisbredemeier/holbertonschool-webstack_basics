@@ -1,8 +1,9 @@
 #!/usr/bin/node
-let text = process.argv;
+'use strict';
+let text = process.argv[2];
 let fs = require('fs');
 
-fs.textToFile(filename, , (err) => {
+fs.toFile(text, function (err, input){
   if (err) throw err;
-  console.log();
+  console.log(input);
 });
