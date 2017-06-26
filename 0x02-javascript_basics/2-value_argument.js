@@ -11,8 +11,7 @@ while (arg[i]) {
 
 if (i === 2) {
    console.log('No argument');
-  }
-if (i > 3) {
+ } else {
   //prints first argument
   console.log(arg[2]);
   }
