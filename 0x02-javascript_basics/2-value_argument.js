@@ -8,7 +8,6 @@ let i = 0;
 while (arg[i]) {
     i++;
 }
-
 if (i === 2) {
    console.log('No argument');
  } else {
