@@ -6,9 +6,13 @@ let arg = process.argv;
 //create counter
 let i = 0;
 
-if (i === 2) {
-   console.log('No argument');
+function isNumber( arg ) {
+    return !isNaN( arg );
+}
+
+if (isNumber = false) {
+   console.log('not a number');
  } else {
   //prints first argument
-  console.log(arg[2]);
+  console.log('My number:', arg[2]);
   }
