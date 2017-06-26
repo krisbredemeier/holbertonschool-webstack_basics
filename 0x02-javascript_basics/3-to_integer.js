@@ -4,14 +4,10 @@
 "use strict";
 let arg = process.argv;
 
-function isNumber(arg) {
-    return !isNaN(arg);
-}
-
 if (isNaN(arg[2]) == true) {
    console.log('Not a number');
  }
 if (isNaN(arg[2]) == false) {
   //prints first argument
   console.log('My number:', arg[2]);
-  }
+ }
