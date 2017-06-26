@@ -1,7 +1,9 @@
 #!/usr/bin/node
 // Write a function that returns the addition of 2 integers.
+'use strict';
 
-let x, y;
-function add(x, y) {
-  x + y
-}
+module.exports = {
+  add: functino() {
+    return (x+y);
+  }
+};
