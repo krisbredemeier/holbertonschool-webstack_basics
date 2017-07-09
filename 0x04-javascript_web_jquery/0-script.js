@@ -1,3 +1,4 @@
-//use querySelector to set header to new color
-let h = document.querySelector('header');
-document.setAttribute('style', 'color: #FF0000');
+<script type="text/javascript">
+let element = document.querySelector('header');
+element.setAttribute('style', 'color: #FF0000');
+</script>
