@@ -1,4 +1,3 @@
-<script>
 $("#toggle_header").on('click', function () {
     let element = $(this).attr('class');
     if (element == 'green') {
@@ -9,4 +8,3 @@ $("#toggle_header").on('click', function () {
         $(this).addClass("green");
     }
 });
-</script>

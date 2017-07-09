@@ -1,4 +1,1 @@
-<script>
-var element = document.getElementById("header");
-element.style.color = "#FF0000";
-</script>
+$("#header").css('color', '#FF0000');
