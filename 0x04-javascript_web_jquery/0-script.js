@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
 let element = document.querySelector('header');
 element.setAttribute('style', 'color: #FF0000');
 </script>
