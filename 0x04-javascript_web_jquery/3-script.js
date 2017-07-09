@@ -1,4 +1,3 @@
-  $('#red_header').click(function(event) {
-    let element = document.getElementById('#red_header');
-    element.className += "red";
-  };
+  $('#red_header').on('click', function() {
+    $(this).addClass('red');
+  });
