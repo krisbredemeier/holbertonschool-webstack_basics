@@ -7,3 +7,9 @@ INSERT INTO `second_table` (`id`,`name`,`score`) VALUES (NULL, "Bob", 14);
 INSERT INTO `second_table` (`id`,`name`,`score`) VALUES (NULL, "George", 8);
 
 
+
+
+
+
+
+
