@@ -1,10 +1,10 @@
 $("#toggle_header").on('click', function () {
-    let element = $(this).attr('class');
+    let element = $('header').attr('class');
     if (element == 'green') {
-        $(this).removeClass("green");
-        $(this).addClass("red");
+        $('header').removeClass("green");
+        $('header').addClass("red");
     } else {
-        $(this).removeClass("red");
-        $(this).addClass("green");
+        $('header').removeClass("red");
+        $('header').addClass("green");
     }
 });
