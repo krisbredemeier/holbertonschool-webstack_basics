@@ -4,3 +4,4 @@ FROM cities
     SELECT id
     FROM states
     WHERE name = California);
+    ORDER BY ASC;
