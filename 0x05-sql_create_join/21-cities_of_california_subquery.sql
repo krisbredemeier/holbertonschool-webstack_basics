@@ -5,5 +5,6 @@ FROM `cities`
   WHERE `cities.state_id` = (
     SELECT `states.id`
     FROM `states`
-    WHERE `name` = "California");
-ORDER BY ASC cities.id;
+    WHERE `name` = "California")
+ORDER BY cities.id
+ASC;
