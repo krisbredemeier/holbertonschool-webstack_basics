@@ -6,4 +6,4 @@ FROM `cities`
     SELECT `states.id`
     FROM `states`
     WHERE `name` = "California");
-    ORDER BY ASC;
+ORDER BY ASC cities.id;
