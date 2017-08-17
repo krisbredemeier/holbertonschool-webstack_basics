@@ -11,8 +11,10 @@ and finally displays the body of the response.
 
 url = (sys.argv[1])
 email = (sys.argv[2])
-h = requests.get(sys.argv[1])
+# h = requests.get(sys.argv[1])
 
-print(url)
-print(email)
-# print(h)
+# url.requests("POST", email)
+h = requests.post(email)
+print('Your email is:', email)
+# print(url)
+# print(email)
