@@ -13,9 +13,8 @@ def starwars():
     import sys
 
     person = sys.argv[1]
-    url = ('https://swapi.co/api/people/name/?search')
+    url = ('https://swapi.co/api/people')
     urlr = requests.get(url, params={ 'search': person }).json()
-    print(urlr)
 
     print('Number of results: {}'.format(urlr['count']))
     for name in urlr['results']:
