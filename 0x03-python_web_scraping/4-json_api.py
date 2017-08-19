@@ -18,19 +18,16 @@ You are not allowed to import packages other than requests and sys
 import requests
 import sys
 
-# q = ("")
-# url = ('http://172.31.54.208:34955/search_user/')
 
 if (len(sys.argv) > 1):
     q = (sys.argv[1])
-    url = ('http://172.31.54.208:34955/search_user/{0}'.format(q))
-    urlr = requests.get(url)
-    print(url)
-    j = urlr.json()
-    print(j)
+    url = ('http://34.206.234.184:34955/search_user')
     # POST
-    r = requests.post(url, q)
-    # print(r.text)
+    urlr = requests.post(url, data={ 'q': q }).json()
+    # print(url)
+    # print(urlr)
+    print(urlr['id'], urlr['name'])
+
     # if (j):
     #     print('[{}]', id, name)
 else:
