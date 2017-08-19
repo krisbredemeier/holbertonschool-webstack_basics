@@ -22,11 +22,13 @@ import sys
 if (len(sys.argv) > 1):
     q = (sys.argv[1])
     url = ('http://34.206.234.184:34955/search_user')
-    # POST
     urlr = requests.post(url, data={ 'q': q }).json()
-    # print(url)
-    # print(urlr)
-    print(urlr['id'], urlr['name'])
+    if ('id' and 'name' not in urlr):
+        print('No result')
+    # if (urlr not {}):
+        # print('Not a valid JSON')
+    else:
+        print('[{}] {}'.format(urlr['id'], urlr['name']))
 
     # if (j):
     #     print('[{}]', id, name)
