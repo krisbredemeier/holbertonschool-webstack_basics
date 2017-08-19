@@ -18,20 +18,26 @@ You are not allowed to import packages other than requests and sys
 import requests
 import sys
 
+def search():
+    '''
+    searches through json for id and name
+    '''
+    if (len(sys.argv) > 1):
+        q = (sys.argv[1])
+        url = ('http://34.206.234.184:34955/search_user')
+        urlr = requests.post(url, data={ 'q': q }).json()
+        if ('id' and 'name' not in urlr):
+            print('No result')
+        # if (requests.data):
+        #     print('Not a valid JSON')
+        else:
+            print('[{}] {}'.format(urlr['id'], urlr['name']))
 
-if (len(sys.argv) > 1):
-    q = (sys.argv[1])
-    url = ('http://34.206.234.184:34955/search_user')
-    urlr = requests.post(url, data={ 'q': q }).json()
-    if ('id' and 'name' not in urlr):
-        print('No result')
-    # if (urlr not {}):
-        # print('Not a valid JSON')
+        # if (j):
+        #     print('[{}]', id, name)
     else:
-        print('[{}] {}'.format(urlr['id'], urlr['name']))
+        q = ("")
+        print('No result')
 
-    # if (j):
-    #     print('[{}]', id, name)
-else:
-    q = ("")
-    print('No result')
+if __name__ == "__main__":
+    search()
