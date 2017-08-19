@@ -17,6 +17,7 @@ def starwars():
     urlr = requests.get(url, params={ 'search': person }).json()
 
     print('Number of results: {}'.format(urlr['count']))
+    # count the number of resturns
     for name in urlr['results']:
         print(name['name'])
 
