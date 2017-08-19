@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-import requests
-import sys
-
 '''
 Write a Python script that takes in a letter
 and sends a POST request to http://0.0.0.0:5000/search_user
@@ -18,14 +15,24 @@ Display No result is the JSON is empty
 You are not allowed to import packages other than requests and sys
 '''
 
-url = ('http://172.31.54.208:34955/search_user')
-urlr = requests.get(url)
+import requests
+import sys
+
+# q = ("")
+# url = ('http://172.31.54.208:34955/search_user/')
 
 if (len(sys.argv) > 1):
     q = (sys.argv[1])
+    url = ('http://172.31.54.208:34955/search_user/{0}'.format(q))
+    urlr = requests.get(url)
+    print(url)
+    j = urlr.json()
+    print(j)
     # POST
-    rp = requests.post(url, q)
-
-    print(rp)
+    r = requests.post(url, q)
+    # print(r.text)
+    # if (j):
+    #     print('[{}]', id, name)
 else:
-    print('this')
+    q = ("")
+    print('No result')
