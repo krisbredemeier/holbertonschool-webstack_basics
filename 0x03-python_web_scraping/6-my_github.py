@@ -10,7 +10,18 @@ def github():
     '''
     Github
     '''
-    curl -u "krisbredemeier" https://api.github.com
+
+    import sys
+    import requests
+    from requests.auth import HTTPBasicAuth
+
+    user = sys.argv[1]
+    password = sys.argv[2]
+    url = ('https://api.github.com')
+    print(user)
+    print(password)
+    urlr = requests.get(url, auth=(user, password)).json()
+    print(urlr['id'])
 
 if __name__ == "__main__":
     github()
