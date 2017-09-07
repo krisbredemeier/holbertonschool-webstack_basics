@@ -17,11 +17,9 @@ def github():
 
     user = sys.argv[1]
     password = sys.argv[2]
-    url = ('https://api.github.com')
-    print(user)
-    print(password)
+    url = ('https://api.github.com/user')
     urlr = requests.get(url, auth=(user, password)).json()
-    print(urlr['id'])
+    print(urlr.get('id'))
 
 if __name__ == "__main__":
     github()
