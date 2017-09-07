@@ -14,8 +14,8 @@ def last_ten():
     url_repo = (url + owner_name + '/' + repo_name + '/' + 'commits')
     print(url_repo)
     urlr = requests.get(url_repo).json()
-    # top = urlr[10]
-    for commit in range(10):
+    top = urlr[-10:]
+    for commit in top:
         print('{}: {}'.format(commit['sha'], commit['commit']['author']['name']))
 
 if __name__ == "__main__":
