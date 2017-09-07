@@ -4,6 +4,10 @@ import sys
 import requests
 
 def last_ten():
+    '''
+    Write a Python script that takes 2 arguments
+    in order to solve this challenge.
+    '''
     url = 'https://api.github.com/repos'
     repo_name = sys.argv[1]
     owner_name = sys.argv[2]
