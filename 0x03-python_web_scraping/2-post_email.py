@@ -9,24 +9,21 @@ and finally displays the body of the response.
 import requests
 import sys
 
-def post():
+
+def post(peram):
     '''
     intro to post
     '''
     # GET
-    url = (sys.argv[1])
-    urlr = requests.get(url)
-    email = (sys.argv[2])
+    url = peram[1]
+    email = {'email': peram[2]}
 
-    # print(url)
-    # print(email)
-
-    # POST
+    #POST
     rp = requests.post(url, email)
 
-    print('Your email is:', email)
+    # print('Your email is:', email)
+    print(response.text)
 
 if __name__ == "__main__":
-    post()
-
-# http://34.206.234.184:34955
+    perams = sys.argv
+    post(perams)

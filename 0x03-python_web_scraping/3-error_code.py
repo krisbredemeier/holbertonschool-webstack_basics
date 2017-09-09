@@ -11,6 +11,7 @@ print: Error code: followed by the value of the HTTP status code
 import requests
 import sys
 
+
 def error():
     '''
     gotta catch all the errors

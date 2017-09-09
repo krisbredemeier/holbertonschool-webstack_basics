@@ -14,7 +14,7 @@ def response():
     prints header response
     '''
     h = requests.get(sys.argv[1])
-    print(h.headers['x-request-id'])
+    print(h.headers.get('X-Request-Id'))
 
 if __name__ == "__main__":
     response()
