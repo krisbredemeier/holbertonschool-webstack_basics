@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 
+'''
+Please list 10 commits (from the most recent to oldest)
+of the repository “rails” by the user “rails”
+You must use the Github API,
+here is the documentation https://developer.github.com/v3/repos/commits/
+Print all commits by: `<sha>: <author name>` (one by line)
+'''
+
 import sys
 import requests
+
 
 def last_ten():
     '''
@@ -14,8 +23,8 @@ def last_ten():
     url_repo = (url + owner_name + '/' + repo_name + '/' + 'commits')
     print(url_repo)
     urlr = requests.get(url_repo).json()
-    top = urlr[-10:]
-    for commit in top:
+    top_ten = urlr[-10:]
+    for commit in top_ten:
         print('{}: {}'.format(commit['sha'], commit['commit']['author']['name']))
 
 if __name__ == "__main__":
