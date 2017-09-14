@@ -6,6 +6,7 @@ Write a Python script that fetches https://intranet.hbtn.io/status
 
 import requests
 
+
 def status():
     '''
     beginning with get response

@@ -9,6 +9,7 @@ in the response header
 import requests
 import sys
 
+
 def response():
     '''
     prints header response

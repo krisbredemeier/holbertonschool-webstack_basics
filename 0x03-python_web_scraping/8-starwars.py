@@ -25,8 +25,6 @@ def sw_api(perams):
         sw_api(perams)
     # person = sys.argv[1]
 
-
-
     # count the number of resturns
     # for name in urlr['results']:
     #     print(name['name'])
@@ -34,6 +32,6 @@ def sw_api(perams):
 if __name__ == "__main__":
     person = sys.argv[1]
     url = ('https://swapi.co/api/people')
-    urlr = requests.get(url, params={ 'search': person }).json()
+    urlr = requests.get(url, params={'search': person}).json()
     print('Number of results: {}'.format(urlr['count']))
     sw_api(person)

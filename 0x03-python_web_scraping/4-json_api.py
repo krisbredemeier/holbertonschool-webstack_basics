@@ -27,7 +27,7 @@ def search():
         q = (sys.argv[1])
         url = ('http://34.206.234.184:34955/search_user')
         try:
-            urlr = requests.post(url, data={ 'q': q }).json()
+            urlr = requests.post(url, data={'q': q}).json()
         except:
             print('Not a valid JSON')
 

@@ -5,6 +5,7 @@ Write a Python script that takes in a string
 and sends a search request to the Star Wars API
 '''
 
+
 def starwars():
     '''
     all of the planets
@@ -14,7 +15,7 @@ def starwars():
 
     person = sys.argv[1]
     url = ('https://swapi.co/api/people/')
-    urlr = requests.get(url, params={ 'search': person }).json()
+    urlr = requests.get(url, params={'search': person}).json()
 
     print('Number of result: {}'.format(urlr['count']))
     # count the number of resturns

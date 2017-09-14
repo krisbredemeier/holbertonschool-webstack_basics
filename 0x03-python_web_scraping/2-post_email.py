@@ -18,7 +18,7 @@ def post(peram):
     url = peram[1]
     email = {'email': peram[2]}
 
-    #POST
+    # POST
     rp = requests.post(url, email)
 
     # print('Your email is:', email)
