@@ -25,7 +25,7 @@ def search():
     '''
     if (len(sys.argv) > 1):
         q = (sys.argv[1])
-        url = ('http://34.206.234.184:34955/search_user')
+        url = ('http://0.0.0.0:5000/search_user/search_user')
         try:
             urlr = requests.post(url, data={'q': q}).json()
         except:
