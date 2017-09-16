@@ -30,8 +30,8 @@ def sw_api():
             for name in urlr['results']:
                 print(name['name'])
                 urlr = requests.get(urlr['next']).json()
-            for name in urlr['results']:
-                print(name['name'])
+        for name in urlr['results']:
+            print(name['name'])
 
 
 if __name__ == "__main__":
