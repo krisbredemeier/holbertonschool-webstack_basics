@@ -9,29 +9,30 @@ import sys
 import requests
 
 
-def sw_api(perams):
+def sw_api():
     '''
     Write a Python script that takes in a string
     and sends a search request to the Star Wars API
     '''
 
-    peram = perams['results']
+    person = sys.argv[1]
+    url = ('https://swapi.co/api/people/')
+    urlr = requests.get(url, params={'search': person}).json()
+    # peram = urlr['results']
+    print('Number of results: {}'.format(urlr['count']))
 
-    for name in peram:
+    for name in urlr['results']:
         print(name['name'])
 
-    if (perams['next'] is not None):
-        urlr = requests.get(perams['next']).json()
-        sw_api(perams)
-    # person = sys.argv[1]
+    if (urlr['next'] is not None):
+        urlr = requests.get(urlr['next']).json()
+        while urlr['next'] is not None:
+            for name in urlr['results']:
+                print(name['name'])
+                urlr = requests.get(urlr['next']).json()
+            for name in urlr['results']:
+                print(name['name'])
 
-    # count the number of resturns
-    # for name in urlr['results']:
-    #     print(name['name'])
 
 if __name__ == "__main__":
-    person = sys.argv[1]
-    url = ('https://swapi.co/api/people')
-    urlr = requests.get(url, params={'search': person}).json()
-    print('Number of results: {}'.format(urlr['count']))
-    sw_api(person)
+    sw_api()
