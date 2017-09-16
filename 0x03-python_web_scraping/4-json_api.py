@@ -23,9 +23,9 @@ def search():
     '''
     searches through json for id and name
     '''
+    url = ('http://0.0.0.0:5000/search_user/search_user')
     if (len(sys.argv) > 1):
         q = (sys.argv[1])
-        url = ('http://0.0.0.0:5000/search_user/search_user')
         try:
             urlr = requests.post(url, data={'q': q}).json()
         except:
