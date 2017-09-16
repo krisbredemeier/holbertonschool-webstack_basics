@@ -24,12 +24,13 @@ def search():
     searches through json for id and name
     '''
     url = ('http://0.0.0.0:5000/search_user/search_user')
+    q = ("")
     if (len(sys.argv) > 1):
         q = (sys.argv[1])
     urlr = requests.post(url, data={'q': q})
-    if(len(sys.argv) == 0):
-        q = ("")
-        print('No result')
+    # if(len(sys.argv) == 0):
+    #     q = ("")
+    #     print('No result')
 
         # try:
         #     url = ('http://0.0.0.0:5000/search_user/search_user')
