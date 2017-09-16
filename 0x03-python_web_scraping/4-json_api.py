@@ -26,19 +26,23 @@ def search():
     url = ('http://0.0.0.0:5000/search_user/search_user')
     if (len(sys.argv) > 1):
         q = (sys.argv[1])
-        try:
-            url = ('http://0.0.0.0:5000/search_user/search_user')
-            urlr = requests.post(url, data={'q': q}).json()
-        except:
-            print('Not a valid JSON')
-
-        if ('id' and 'name' not in urlr):
-            print('No result')
-        else:
-            print('[{}] {}'.format(urlr['id'], urlr['name']))
     else:
         q = ("")
         print('No result')
+    urlr = requests.post(url, data={'q': q}).json()
+        # try:
+        #     url = ('http://0.0.0.0:5000/search_user/search_user')
+        #     urlr = requests.post(url, data={'q': q}).json()
+        # except:
+        #     print('Not a valid JSON')
+
+    if ('id' and 'name' not in urlr):
+        print('No result')
+    else:
+        try:
+            print('[{}] {}'.format(urlr['id'], urlr['name']))
+        except:
+            print('Not a valid JSON')
 
 if __name__ == "__main__":
     search()
