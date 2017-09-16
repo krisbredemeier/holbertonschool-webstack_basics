@@ -20,7 +20,7 @@ def error():
     urlr = requests.get(url)
 
     if (urlr.status_code >= 400):
-        print('Error code: ', urlr.status_code)
+        print('Error code: {}'.format(urlr.status_code))
     else:
         print(urlr.text)
 
