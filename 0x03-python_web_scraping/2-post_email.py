@@ -19,10 +19,10 @@ def post(peram):
     email = {'email': peram[2]}
 
     # POST
-    rp = requests.post(url, email)
+    rp = requests.post(url, data=email)
 
     # print('Your email is:', email)
-    print(response.text)
+    print(rp.text)
 
 if __name__ == "__main__":
     perams = sys.argv
