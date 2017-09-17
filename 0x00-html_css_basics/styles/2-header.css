@@ -18,7 +18,7 @@ header .content {
 header .logo {
   background-color: #0000FF;
   height: 100%;
-  width: 100%;
+  width: 120px;
   position: absolute;
   left: 0px;
 }
