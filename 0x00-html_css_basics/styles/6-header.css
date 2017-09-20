@@ -82,7 +82,7 @@ input {
   width: 100%;
 }
 
-/*#search_find {
+#search_find {
   width: 100%;
   padding: 0px 10px 0px 10px;
   font-size: 14px;
@@ -103,4 +103,4 @@ input {
   color: white;
   height: 100%;
   width: 100%;
-}*/
+}
