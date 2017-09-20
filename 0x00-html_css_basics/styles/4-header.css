@@ -45,13 +45,13 @@ header .user {
   float: right;
 }
 
-.find {
+header .search .find {
   background-color: #005555;
   height: 100%;
   width: 45%;
 }
 
-.location {
+header .search .location {
   background-color: #009999;
   height: 100%;
   width: 45%;
