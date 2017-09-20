@@ -5,10 +5,10 @@ header {
   padding-top: 10px;
 }
 
-header .content {
+header .container {
   background-color: #00FF00;
   height: 50px;
-  max-width: 100%;
+  max-width: 1000px;
   padding: 0px;
   margin: auto;
   list-style-type: none;
